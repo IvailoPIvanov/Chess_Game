@@ -1,0 +1,163 @@
+/*--- background ---*/
+
+body {
+    background: url("../img/white.jpg") no-repeat center fixed;
+}
+
+/*--- board ---*/
+
+.board {
+    width: 500px;
+    height: 497px;
+    background: url(../img/wood.jpg) no-repeat;
+    background-size: 100%;
+    border: 5px solid #000000;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.tr {
+    width: 50px;
+    height: 50px;
+}
+
+.td {
+    width: 50px;
+    height: 50px;
+    border: 3px solid black;
+
+}
+
+.tr:nth-child(even) .td:nth-child(odd) {
+    background: url(../img/logo.jpg);
+}
+
+.tr:nth-child(odd) .td:nth-child(even) {
+    background: url(../img/logo.jpg);
+}
+
+tr:first-child {
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td:first-child {
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tr:last-child {
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td:last-child {
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- rotation for board --- */
+
+.rotation {
+    width: 500px;
+    height: 497px;
+    background: url(../img/wood.jpg) no-repeat;
+    background-size: 100%;
+    border: 5px solid #000000;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transition: transform 1700ms ease;
+    -moz-transition: -moz-transform 1700ms ease;
+    -ms-transition: -ms-transform 1700ms ease;
+    -o-transition: -o-transform 17000ms ease;
+    -webkit-transition: -webkit-transform 1700ms ease;
+}
+
+.to_yours {
+    width: 500px;
+    height: 497px;
+    background: url(../img/wood.jpg) no-repeat;
+    background-size: 100%;
+    border: 5px solid #000000;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transition: transform 1700ms ease;
+    -moz-transition: -moz-transform 1700ms ease;
+    -ms-transition: -ms-transform 1700ms ease;
+    -o-transition: -o-transform 1700ms ease;
+    -webkit-transition: -webkit-transform 1700ms ease;
+}
+
+/*--- rotate numbers and text on board ---*/
+
+.rotate_text {
+
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+
+}
+
+/*--- rotate figures ---*/
+
+.rotate_figures {
+
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    transition: transform 1700ms ease;
+    -moz-transition: -moz-transform 1700ms ease;
+    -ms-transition: -ms-transform 1700ms ease;
+    -o-transition: -o-transform 1700ms ease;
+    -webkit-transition: -webkit-transform 1700ms ease;
+
+}
+
+.rotate_figures_to_normal {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    transition: transform 1700ms ease;
+    -moz-transition: -moz-transform 1700ms ease;
+    -ms-transition: -ms-transform 1700ms ease;
+    -o-transition: -o-transform 1700ms ease;
+    -webkit-transition: -webkit-transform 1700ms ease;
+}
+
+/*--- pieces decoration onclick ---*/
+.pop_up {
+    background: blue;
+    opacity: 0.6;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+}
+
+.available_moves {
+    background: greenyellow;
+    opacity: 0.6;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+}
